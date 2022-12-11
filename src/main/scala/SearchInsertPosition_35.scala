@@ -1,6 +1,9 @@
 import scala.annotation.tailrec
 object SearchInsertPosition_35 extends App {
 
+  //Takeaways
+  //Pretty similiar with binary search solution
+  //Dont forget parentheses in an if statement
   def searchInsert(nums: Array[Int], target: Int): Int = {
 
     @tailrec
