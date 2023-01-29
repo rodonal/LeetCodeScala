@@ -1,4 +1,3 @@
-977. Squares of a Sorted Array
 189. Rotate Array
 283. Move Zeroes
 167. Two Sum II - Input Array Is Sorted

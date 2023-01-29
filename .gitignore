@@ -41,3 +41,26 @@ bin/
 
 # general
 *.class
+
+
+# Created by https://www.toptal.com/developers/gitignore/api/sbt,scala
+# Edit at https://www.toptal.com/developers/gitignore?templates=sbt,scala
+
+### SBT ###
+# Simple Build Tool
+# http://www.scala-sbt.org/release/docs/Getting-Started/Directories.html#configuring-version-control
+
+dist/*
+lib_managed/
+src_managed/
+project/boot/
+project/plugins/project/
+.lib/
+
+### SBT Patch ###
+.bsp/
+
+# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
+hs_err_pid*
+
+# End of https://www.toptal.com/developers/gitignore/api/sbt,scala
