@@ -43,4 +43,44 @@ object Fold extends App {
 
   println(stringList)
 
+  //Another example
+
+  /**
+
+  In general, all 6 fold functions apply a binary operator to each element of a collection. The result of each step is passed on to the next step (as input to one of the binary operator's two arguments). This way we can cumulate a result.
+
+    reduceLeft and reduceRight cumulate a single result.
+
+    foldLeft and foldRight cumulate a single result using a start value.
+
+    scanLeft and scanRight cumulate a collection of intermediate cumulative results using a start value.
+
+   **/
+
+  val abc = List("A","B","C")
+
+  def addLeft(res: String, x: String) = {
+    println(s"op: $res + $x = ${res + x}")
+    res + x
+  }
+
+  abc.foldLeft("z")(addLeft) // with start value "z"
+  // op: z + A = zA      // initial extra operation
+  // op: zA + B = zAB
+  // op: zAB + C = zABC
+  // res: String = zABC
+
+
+  def addRight(x: String, res: String) = {
+    println(s"op: $x + $res = ${x + res}")
+    x + res
+  }
+
+  abc.foldRight("z")(addRight)
+  // op: C + z = Cz
+  // op: B + Cz = BCz
+  // op: A + BCz = ABCz
+  // res: String = ABCz
+
+
 }
